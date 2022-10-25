@@ -11,15 +11,17 @@ namespace IS405.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private EmployeeDbContext _context { get; set; }
 
-        public HomeController(ILogger<HomeController> logger)
+        //Constructor
+        public HomeController(EmployeeDbContext temp)
         {
-            _logger = logger;
+            _context = temp;
         }
 
         public IActionResult Index()
         {
+           
             return View();
         }
 
@@ -30,18 +32,13 @@ namespace IS405.Controllers
 
         public IActionResult Data()
         {
+            var employeeList = _context.Employees.ToList();
             return View();
         }
 
         public IActionResult Reports()
         {
             return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
