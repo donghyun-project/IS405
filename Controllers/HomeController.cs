@@ -28,6 +28,16 @@ namespace IS405.Controllers
             return View();
         }
 
+        public IActionResult Data()
+        {
+            return View();
+        }
+
+        public IActionResult Reports()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
