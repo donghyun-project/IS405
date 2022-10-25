@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Employee Data";
+}
+@model List<Employee>
+
+<h1>Employee Data</h1>
+
+<table>
+    <tr>
+        <th>First</th>
+        <th>Last</th>
+        <th>International</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>ExpectedWorkHours</th>
+        <th>Semester</th>
+        <th>Year</th>
+        <th>BYU ID</th>
+        <th>Position Type</th>
+        <th>Class Code</th>
+        <th>Employment Record</th>
+        <th>Supervisor</th>
+        <th>Hire date</th>
+        <th>Pay Rate</th>
+        <th>Last Pay Increase</th>
+        <th>Pay Increase Amount</th>
+        <th>Increase Input Date</th>
+        <th>Major/Year</th>
+        <th>Pay Grad Tuition</th>
+        <th>Name Change Completed</th>
+        <th>Notes</th>
+        <th>Terminated</th>
+        <th>Termination Date</th>
+        <th>Qualtrics Survey Sent</th>
+        <th>Submitted Form</th>
+        <th>Work Authorization Recieved</th>
+        <th>Work Authorization Email Sent</th>
+        <th>BYU Name</th>
+    </tr>
+    @foreach (var e in Model)
+    {
+        <tr>
+            <td>@e.firstName</td>
+            <td>@e.lastName</td>
+            <td>@e.international</td>
+            <td>@e.gender</td>
+            <td>@e.email</td>
+            <td>@e.expectedWorkHours</td>
+            <td>@e.semester</td>
+            <td>@e.year</td>
+            <td>@e.byuID</td>
+            <td>@e.positionType</td>
+            <td>@e.classCode</td>
+            <td>@e.emplRecord</td>
+            <td>@e.supervisor</td>
+            <td>@e.hireDate</td>
+            <td>@e.payRate</td>
+            <td>@e.lastPayIncrease</td>
+            <td>@e.payIncreaseAmount</td>
+            <td>@e.increaseInputDate</td>
+            <td>@e.majorYear</td>
+            <td>@e.payGradTuition</td>
+            <td>@e.nameChangeCompleted</td>
+            <td>@e.notes</td>
+            <td>@e.terminated</td>
+            <td>@e.terminationDate</td>
+            <td>@e.qualtricsSurveySent</td>
+            <td>@e.submittedForm</td>
+            <td>@e.workAuthorizationReceived</td>
+            <td>@e.workAuthorizationEmailSent</td>
+            <td>@e.byuName</td>
+        </tr>
+    }
+</table>
