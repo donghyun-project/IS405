@@ -21,8 +21,6 @@ namespace IS405.Models
         public string classCode { get; set; }
         public string emplRecord { get; set; }
         public string supervisor { get; set; }
-        public string hireDate { get; set; } 
-
         public string hireDate { get; set; }    // Same thing here, there should be date time data type
         public string payRate { get; set; }
         public string lastPayIncrease { get; set; }
