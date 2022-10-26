@@ -8,7 +8,6 @@ namespace IS405.Models
         [Key]
         [Required]
         public string byuID { get; set; }
-
         public string firstName { get; set; }
         public string lastName { get; set; }
         public bool international { get; set; }
@@ -18,12 +17,13 @@ namespace IS405.Models
         public string semester { get; set; }
         public int year { get; set; }
         public string phone { get; set; }
-
         public string positionType { get; set; }
         public string classCode { get; set; }
         public string emplRecord { get; set; }
         public string supervisor { get; set; }
         public string hireDate { get; set; } 
+
+        public string hireDate { get; set; }    // Same thing here, there should be date time data type
         public string payRate { get; set; }
         public string lastPayIncrease { get; set; }
         public string payIncreaseAmount { get; set; }
@@ -33,6 +33,7 @@ namespace IS405.Models
         public bool nameChangeCompleted { get; set; }
         public string notes { get; set; }
         public bool terminated { get; set; }
+
         public string terminationDate { get; set; } 
         public bool qualtricsSurveySent { get; set; } 
         public bool submittedForm { get; set; }          

@@ -1,4 +1,4 @@
-﻿using IS405.Models;
+using IS405.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,13 +11,13 @@ namespace IS405.Controllers
 {
     public class HomeController : Controller
     {
-        
+           
         private EmployeeDbContext _context { get; set; }
-        
+
         //Constructor
         public HomeController(EmployeeDbContext temp)
         {
-           
+
             _context = temp;
         }
 
