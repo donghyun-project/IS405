@@ -21,6 +21,7 @@ namespace IS405.Models
         public string classCode { get; set; }
         public string emplRecord { get; set; }
         public string supervisor { get; set; }
+        public string hireDate { get; set; } 
 
         public string hireDate { get; set; }    // Same thing here, there should be date time data type
         public string payRate { get; set; }
@@ -34,8 +35,8 @@ namespace IS405.Models
         public bool terminated { get; set; }
 
         public string terminationDate { get; set; } 
-        public string qualtricsSurveySent { get; set; }   // Should this be a bool or a date?
-        public string submittedForm { get; set; }          // Should this be a bool?
+        public bool qualtricsSurveySent { get; set; } 
+        public bool submittedForm { get; set; }          
         public bool workAuthorizationReceived { get; set; }
         public string workAuthorizationEmailSent { get; set; }
         public string byuName { get; set; }

@@ -27,11 +27,17 @@ namespace IS405
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<EmployeeDbContext>(options =>
-           {
+           // services.AddDbContext<EmployeeDbContext>(options =>
+           //{
+           //    options.UseSqlite(Configuration["ConnectionStrings:EmployeeDbConnection"]);
+           //});
 
-               options.UseSqlite(Configuration["ConnectionStrings:EmployeeDbConnection"]);
-           });
+            services.AddDbContext<EmployeeDbContext>(options =>
+
+            {
+                options.UseSqlite(Configuration["ConnectionStrings:EmployeeDbConnection"]);
+            }
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

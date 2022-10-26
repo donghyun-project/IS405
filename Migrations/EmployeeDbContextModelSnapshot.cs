@@ -80,14 +80,14 @@ namespace IS405.Migrations
                     b.Property<string>("positionType")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("qualtricsSurveySent")
-                        .HasColumnType("TEXT");
+                    b.Property<bool>("qualtricsSurveySent")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("semester")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("submittedForm")
-                        .HasColumnType("TEXT");
+                    b.Property<bool>("submittedForm")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("supervisor")
                         .HasColumnType("TEXT");
@@ -121,18 +121,96 @@ namespace IS405.Migrations
                             expectedWorkHours = "8-5",
                             firstName = "Mickey",
                             gender = "Male",
-                            hireDate = "08-12-2022",
+                            hireDate = "08-10-2022",
                             international = false,
                             lastName = "Mouse",
                             nameChangeCompleted = false,
                             payGradTuition = false,
                             phone = "801-123-4567",
                             positionType = "TA",
+                            qualtricsSurveySent = false,
                             semester = "Winter",
+                            submittedForm = false,
                             supervisor = "Hilton",
                             terminated = false,
                             workAuthorizationReceived = false,
                             year = 2023
+                        },
+                        new
+                        {
+                            byuID = "89-161-7523",
+                            byuName = "Walter White",
+                            classCode = "IS-413",
+                            email = "heisenberg@gmail.com",
+                            expectedWorkHours = "8-5",
+                            firstName = "Walter",
+                            gender = "Male",
+                            hireDate = "05-17-2021",
+                            international = false,
+                            lastName = "White",
+                            nameChangeCompleted = false,
+                            payGradTuition = false,
+                            phone = "425-555-7711",
+                            positionType = "TA",
+                            qualtricsSurveySent = false,
+                            semester = "Fall",
+                            submittedForm = false,
+                            supervisor = "Hilton",
+                            terminated = true,
+                            terminationDate = "12-17-2021",
+                            workAuthorizationReceived = false,
+                            year = 2021
+                        },
+                        new
+                        {
+                            byuID = "45-233-1110",
+                            byuName = "Elenor Shellstrop",
+                            classCode = "IS-115",
+                            email = "badplace@gmail.com",
+                            expectedWorkHours = "12-4",
+                            firstName = "Elenor",
+                            gender = "Female",
+                            hireDate = "01-10-2020",
+                            increaseInputDate = "04-29-2020",
+                            international = false,
+                            lastName = "Shellstrop",
+                            lastPayIncrease = "05-01-2020",
+                            nameChangeCompleted = false,
+                            payGradTuition = false,
+                            payIncreaseAmount = "$0.67",
+                            phone = "413-887-9145",
+                            positionType = "TA",
+                            qualtricsSurveySent = false,
+                            semester = "Spring",
+                            submittedForm = false,
+                            supervisor = "Burton",
+                            terminated = false,
+                            workAuthorizationReceived = false,
+                            year = 2020
+                        },
+                        new
+                        {
+                            byuID = "22-355-8870",
+                            byuName = "Elena Gilbert",
+                            classCode = "IS-403",
+                            email = "vampiresrules@gmail.com",
+                            expectedWorkHours = "7-11",
+                            firstName = "Elena",
+                            gender = "Female",
+                            hireDate = "07-31-2021",
+                            international = false,
+                            lastName = "Gilbert",
+                            nameChangeCompleted = false,
+                            payGradTuition = false,
+                            phone = "685-773-6592",
+                            positionType = "RA",
+                            qualtricsSurveySent = false,
+                            semester = "Fall",
+                            submittedForm = false,
+                            supervisor = "Anderson",
+                            terminated = false,
+                            workAuthorizationReceived = false,
+                            year = 2020
                         });
                 });
 #pragma warning restore 612, 618
