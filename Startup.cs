@@ -29,7 +29,8 @@ namespace IS405
 
             services.AddDbContext<EmployeeDbContext>(options =>
            {
-               options.UseMySql(Configuration["ConnectionStrings:EmployeeDbConnection"]);
+
+               options.UseSqlite(Configuration["ConnectionStrings:EmployeeDbConnection"]);
            });
         }
 
