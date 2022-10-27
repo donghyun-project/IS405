@@ -2,7 +2,7 @@
 
 namespace IS405.Migrations
 {
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -10,7 +10,8 @@ namespace IS405.Migrations
                 name: "Employees",
                 columns: table => new
                 {
-                    byuID = table.Column<string>(nullable: false),
+                    byuID = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
                     firstName = table.Column<string>(nullable: true),
                     lastName = table.Column<string>(nullable: true),
                     international = table.Column<bool>(nullable: false),
@@ -49,22 +50,22 @@ namespace IS405.Migrations
             migrationBuilder.InsertData(
                 table: "Employees",
                 columns: new[] { "byuID", "byuName", "classCode", "email", "emplRecord", "expectedWorkHours", "firstName", "gender", "hireDate", "increaseInputDate", "international", "lastName", "lastPayIncrease", "majorYear", "nameChangeCompleted", "notes", "payGradTuition", "payIncreaseAmount", "payRate", "phone", "positionType", "qualtricsSurveySent", "semester", "submittedForm", "supervisor", "terminated", "terminationDate", "workAuthorizationEmailSent", "workAuthorizationReceived", "year" },
-                values: new object[] { "11-222-1234", "Mickey Mouse", "IS-201", "mmouse@gmail.com", null, "8-5", "Mickey", "Male", "08-10-2022", null, false, "Mouse", null, null, false, null, false, null, null, "801-123-4567", "TA", false, "Winter", false, "Hilton", false, null, null, false, 2023 });
+                values: new object[] { 9988, "Mickey Mouse", "IS-201", "mmouse@gmail.com", null, "8-5", "Mickey", "Male", "08-10-2022", null, false, "Mouse", null, null, false, null, false, null, null, "801-123-4567", "TA", false, "Winter", false, "Hilton", false, null, null, false, 2023 });
 
             migrationBuilder.InsertData(
                 table: "Employees",
                 columns: new[] { "byuID", "byuName", "classCode", "email", "emplRecord", "expectedWorkHours", "firstName", "gender", "hireDate", "increaseInputDate", "international", "lastName", "lastPayIncrease", "majorYear", "nameChangeCompleted", "notes", "payGradTuition", "payIncreaseAmount", "payRate", "phone", "positionType", "qualtricsSurveySent", "semester", "submittedForm", "supervisor", "terminated", "terminationDate", "workAuthorizationEmailSent", "workAuthorizationReceived", "year" },
-                values: new object[] { "89-161-7523", "Walter White", "IS-413", "heisenberg@gmail.com", null, "8-5", "Walter", "Male", "05-17-2021", null, false, "White", null, null, false, null, false, null, null, "425-555-7711", "TA", false, "Fall", false, "Hilton", true, "12-17-2021", null, false, 2021 });
+                values: new object[] { 891617523, "Walter White", "IS-413", "heisenberg@gmail.com", null, "8-5", "Walter", "Male", "05-17-2021", null, false, "White", null, null, false, null, false, null, null, "425-555-7711", "TA", false, "Fall", false, "Hilton", true, "12-17-2021", null, false, 2021 });
 
             migrationBuilder.InsertData(
                 table: "Employees",
                 columns: new[] { "byuID", "byuName", "classCode", "email", "emplRecord", "expectedWorkHours", "firstName", "gender", "hireDate", "increaseInputDate", "international", "lastName", "lastPayIncrease", "majorYear", "nameChangeCompleted", "notes", "payGradTuition", "payIncreaseAmount", "payRate", "phone", "positionType", "qualtricsSurveySent", "semester", "submittedForm", "supervisor", "terminated", "terminationDate", "workAuthorizationEmailSent", "workAuthorizationReceived", "year" },
-                values: new object[] { "45-233-1110", "Elenor Shellstrop", "IS-115", "badplace@gmail.com", null, "12-4", "Elenor", "Female", "01-10-2020", "04-29-2020", false, "Shellstrop", "05-01-2020", null, false, null, false, "$0.67", null, "413-887-9145", "TA", false, "Spring", false, "Burton", false, null, null, false, 2020 });
+                values: new object[] { 452331110, "Elenor Shellstrop", "IS-115", "badplace@gmail.com", null, "12-4", "Elenor", "Female", "01-10-2020", "04-29-2020", false, "Shellstrop", "05-01-2020", null, false, null, false, "$0.67", null, "413-887-9145", "TA", false, "Spring", false, "Burton", false, null, null, false, 2020 });
 
             migrationBuilder.InsertData(
                 table: "Employees",
                 columns: new[] { "byuID", "byuName", "classCode", "email", "emplRecord", "expectedWorkHours", "firstName", "gender", "hireDate", "increaseInputDate", "international", "lastName", "lastPayIncrease", "majorYear", "nameChangeCompleted", "notes", "payGradTuition", "payIncreaseAmount", "payRate", "phone", "positionType", "qualtricsSurveySent", "semester", "submittedForm", "supervisor", "terminated", "terminationDate", "workAuthorizationEmailSent", "workAuthorizationReceived", "year" },
-                values: new object[] { "22-355-8870", "Elena Gilbert", "IS-403", "vampiresrules@gmail.com", null, "7-11", "Elena", "Female", "07-31-2021", null, false, "Gilbert", null, null, false, null, false, null, null, "685-773-6592", "RA", false, "Fall", false, "Anderson", false, null, null, false, 2020 });
+                values: new object[] { 223558870, "Elena Gilbert", "IS-403", "vampiresrules@gmail.com", null, "7-11", "Elena", "Female", "07-31-2021", null, false, "Gilbert", null, null, false, null, false, null, null, "685-773-6592", "RA", false, "Fall", false, "Anderson", false, null, null, false, 2020 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

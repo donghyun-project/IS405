@@ -1,0 +1,138 @@
+﻿@{
+    ViewData["Title"] = "IS 405 Project 5";
+}
+
+@model IS405.Models.Employee;
+
+<h1>Enter Employee Data</h1>
+
+<div>
+    <form method="post">
+
+        <label id="byuID" asp-for="byuID">BYU ID: </label>
+        <input asp-for="byuID" /><br />
+
+        <label id="firstname" asp-for="firstName">First Name: </label>
+        <input asp-for="firstName" /><br />
+
+        <label id="lastname" asp-for="lastName">Last Name: </label>
+        <input asp-for="lastName" /><br />
+
+        <label id="byuName" asp-for="byuName">BYU Name: </label>
+        <input asp-for="byuName" /><br />
+
+        <label id="international" asp-for="international">International: </label>
+        <select asp-for="international">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br />
+
+        <label id="gender" asp-for="gender">Gender: </label>
+        <select asp-for="gender">
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+        </select><br />
+
+        <label id="email" asp-for="email">Email: </label>
+        <input asp-for="email" /><br />
+
+        <label id="expectedWorkHours" asp-for="expectedWorkHours">Expected Work Hours: </label>
+        <input asp-for="expectedWorkHours" /><br />
+
+        <label id="semester" asp-for="semester">Semester: </label>
+        <input asp-for="semester" /><br />
+
+        <label id="year" asp-for="year">Year: </label>
+        <input asp-for="year" /><br />
+
+        <label id="phone" asp-for="phone">Phone Number: </label>
+        <input asp-for="phone" /><br />
+
+        <label id="positionType" asp-for="positionType">Position Type: </label>
+        <select asp-for="positionType">
+            <option value="TA">Teaching Assistant</option>
+            <option value="RA">Research Assistant</option>
+        </select><br />
+
+        <label id="classCode" asp-for="classCode">Class Code: </label>
+        <input asp-for="classCode" /><br />
+
+        <label id="emplRecord" asp-for="emplRecord">Employee Record: </label>
+        <input asp-for="emplRecord" /><br />
+
+        <label id="supervisor" asp-for="supervisor">Supervisor: </label>
+        <input asp-for="supervisor" /><br />
+
+        <label id="hireDate" asp-for="hireDate">Hired Date: </label>
+        <input asp-for="hireDate" /><br />
+
+        <label id="payRate" asp-for="payRate">Pay Rate: </label>
+        <input asp-for="payRate" /><br />
+
+        <label id="lastPayIncrease" asp-for="lastPayIncrease">Last Pay Increase: </label>
+        <input asp-for="lastPayIncrease" /><br />
+
+        <label id="payIncreaseAmount" asp-for="payIncreaseAmount">Pay Increase Amount</label>
+        <input asp-for="payIncreaseAmount" /><br />
+
+        <label id="increaseInputDate" asp-for="increaseInputDate">Increase Input Date: </label>
+        <input asp-for="increaseInputDate" /><br />
+
+        <label id="majorYear" asp-for="majorYear">Major Year: </label>
+        <input asp-for="majorYear" /><br />
+
+        <label id="payGradTuition" asp-for="payGradTuition">Pay Graduation Tuition: </label>
+        <select asp-for="payGradTuition">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br />
+
+        <label id="nameChangeCompleted" asp-for="nameChangeCompleted">Name Changed Completion: </label>
+        <select asp-for="nameChangeCompleted">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br />
+
+        <label id="notes" asp-for="notes">Notes: </label>
+        <input asp-for="notes" /><br />
+
+        <label id="terminated" asp-for="terminated">Terminated: </label>
+        <select asp-for="terminated">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br />
+
+        <label id="terminationDate" asp-for="terminationDate">Termination Date: </label>
+        <input asp-for="terminationDate" /><br />
+
+        <label id="qualtricsSurveySent" asp-for="qualtricsSurveySent">Qualtrics Survey Sent: </label>
+        <select asp-for="qualtricsSurveySent">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br />
+
+        <label id="submittedForm" asp-for="submittedForm">Form Submision: </label>
+        <select asp-for="submittedForm">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br />
+
+        <label id="WorkAuthorizationReceived" asp-for="workAuthorizationReceived">Work Authorization Received: </label>
+        <select asp-for="workAuthorizationReceived">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br />
+
+        <label id="workAuthorizationEmailSent" asp-for="workAuthorizationEmailSent">Work Authorization Email Sent: </label>
+        <input asp-for="workAuthorizationEmailSent" /><br />
+
+        <input id="submit" type="submit" value="Submit New Employee" />
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+        <div asp-validation-summary="All"></div>
+    </form>
+</div>

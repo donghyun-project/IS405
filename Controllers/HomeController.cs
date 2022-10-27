@@ -45,12 +45,49 @@ namespace IS405.Controllers
         public IActionResult Data()
         {
             var employeeList = _context.Employees.ToList();
-            return View();
+            return View(employeeList);
         }
 
         public IActionResult Reports()
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult Employees()
+        {
+            ViewBag.Employees = _context.Employees.ToList();
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Employees(Employee emp)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(emp);
+                _context.SaveChanges();
+
+                return View("Confirmation", emp);            
+            }
+            else
+            {
+                ViewBag.Employees = _context.Employees.ToList();
+
+                return View(emp);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Edit(string byuid)
+        {
+            ViewBag.Employees = _context.Employees.ToList();
+
+            var emp = _context.Employees.Single(e => e.byuID == byuid);
+
+            return View("Employees", emp);
+        }
+
     }
 }

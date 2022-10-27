@@ -15,6 +15,7 @@ namespace IS405.Models
         public string email { get; set; }
         public string expectedWorkHours { get; set; }   // Is there a different data type we can use for this
         public string semester { get; set; }
+        [Required]
         public int year { get; set; }
         public string phone { get; set; }
         public string positionType { get; set; }

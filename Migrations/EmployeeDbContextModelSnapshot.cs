@@ -17,8 +17,9 @@ namespace IS405.Migrations
 
             modelBuilder.Entity("IS405.Models.Employee", b =>
                 {
-                    b.Property<string>("byuID")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("byuID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("byuName")
                         .HasColumnType("TEXT");
@@ -114,7 +115,7 @@ namespace IS405.Migrations
                     b.HasData(
                         new
                         {
-                            byuID = "11-222-1234",
+                            byuID = 9988,
                             byuName = "Mickey Mouse",
                             classCode = "IS-201",
                             email = "mmouse@gmail.com",
@@ -138,7 +139,7 @@ namespace IS405.Migrations
                         },
                         new
                         {
-                            byuID = "89-161-7523",
+                            byuID = 891617523,
                             byuName = "Walter White",
                             classCode = "IS-413",
                             email = "heisenberg@gmail.com",
@@ -163,7 +164,7 @@ namespace IS405.Migrations
                         },
                         new
                         {
-                            byuID = "45-233-1110",
+                            byuID = 452331110,
                             byuName = "Elenor Shellstrop",
                             classCode = "IS-115",
                             email = "badplace@gmail.com",
@@ -190,7 +191,7 @@ namespace IS405.Migrations
                         },
                         new
                         {
-                            byuID = "22-355-8870",
+                            byuID = 223558870,
                             byuName = "Elena Gilbert",
                             classCode = "IS-403",
                             email = "vampiresrules@gmail.com",
