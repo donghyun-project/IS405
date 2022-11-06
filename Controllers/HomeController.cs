@@ -76,8 +76,6 @@ namespace IS405.Controllers
 
         public FileResult Export()
         {
-            //if (type == null)
-            //{
                 string[] columnNames = new string[] { "byuID", "firstName", "lastName", "international", "gender", "email", "expectedWorkHours", "semester", "year", "phone", "positionType", "classCode", "emplRecord", "supervisor", "hireDate", "payRate", "lastPayIncrease", "payIncreaseAmount", "increaseInputDate", "majorYear", "payGradTuition", "nameChangeCompleted", "notes", "terminated", "terminationDate", "qualtricsSurveySent", "submittedForm", "workAuthorizationReceived", "workAuthorizationEmailSent", "byuName" };
                 var emplpoyees_e = _context.Employees.ToList();
                 string csv = string.Empty;
@@ -125,18 +123,6 @@ namespace IS405.Controllers
                 }
                 byte[] bytes = Encoding.ASCII.GetBytes(csv);
                 return File(bytes, "text/csv", "All_Emp.csv");
-
-            //}
-            //if (type == "semester")
-            //
-            //    string[] columnNames = new string[] { "byuID", "firstName", "lastName", "international", "gender", "email", "expectedWorkHours", "semester", "year", "phone", "positionType", "classCode", "emplRecord", "supervisor", "hireDate", "payRate", "lastPayIncrease", "payIncreaseAmount", "increaseInputDate", "majorYear", "payGradTuition", "nameChangeCompleted", "notes", "terminated", "terminationDate", "qualtricsSurveySent", "submittedForm", "workAuthorizationReceived", "workAuthorizationEmailSent", "byuName" };
-            //    var emplpoyees_sem = _context.Employees.OrderBy(x => x.semester).ToList();
-           // }
-           // if (type == "supervisor")
-          //  {
-           //     string[] columnNames = new string[] { "byuID", "firstName", "lastName", "international", "gender", "email", "expectedWorkHours", "semester", "year", "phone", "positionType", "classCode", "emplRecord", "supervisor", "hireDate", "payRate", "lastPayIncrease", "payIncreaseAmount", "increaseInputDate", "majorYear", "payGradTuition", "nameChangeCompleted", "notes", "terminated", "terminationDate", "qualtricsSurveySent", "submittedForm", "workAuthorizationReceived", "workAuthorizationEmailSent", "byuName" };
-           //     var emplpoyees_sup = _context.Employees.OrderBy(x => x.supervisor).ToList();
-           // }
         }
 
         [HttpGet]
