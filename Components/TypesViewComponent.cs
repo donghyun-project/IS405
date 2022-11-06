@@ -16,7 +16,8 @@ namespace IS405.Components
         }
         public IViewComponentResult Invoke()
         {
-            //var types = _context.Employees.Select(x = )
+            ViewBag.SelectType = "semester";
+
             return View();
         }
     }

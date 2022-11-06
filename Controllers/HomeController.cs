@@ -42,10 +42,30 @@ namespace IS405.Controllers
             return View();
         }
 
-        public IActionResult Data()
+        public IActionResult Data(string type)
         {
-            var employeeList = _context.Employees.ToList();
-            return View(employeeList);
+            
+            if (type == null)
+            {
+                var employeeList1 = _context.Employees.ToList();
+
+                return View(employeeList1);
+            }
+
+            if (type == "semester")
+            {
+                var employeeList2 = _context.Employees.OrderBy(x => x.semester).ToList();
+
+                return View(employeeList2);
+            }
+
+            if (type == "supervisor")
+            {
+                var employeeList3 = _context.Employees.OrderBy(x => x.supervisor).ToList();
+
+                return View(employeeList3);
+            }
+            return View();
         }
 
         public IActionResult Reports()
