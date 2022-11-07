@@ -1,0 +1,15 @@
+﻿@{
+    var semester = ViewBag.SelectType;
+}
+
+<div>
+    <a asp-controller="Home" asp-action="Data" asp-route-type="semester" class="btn btn-sm btn-primary">
+        Filter By Semester
+    </a>
+
+    <a asp-controller="Home" asp-action="Data" asp-route-type="supervisor" class="btn btn-sm btn-primary">
+        Filter By Supervisor
+    </a>
+    <a asp-controller="Home" asp-action="Export" class="btn btn-sm btn-primary">Download All Data</a>
+
+</div>

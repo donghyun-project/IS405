@@ -8,6 +8,7 @@
 <h4 class="nav-item">
     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Employees">Add New Employee</a>
 </h4>
+<vc:types></vc:types>
 
 <table>
     <tr>
@@ -43,38 +44,38 @@
     </tr>
     @foreach (var e in Model)
     {
-<tr>
-    <td>@e.firstName</td>
-    <td>@e.lastName</td>
-    <td>@e.international</td>
-    <td>@e.gender</td>
-    <td>@e.email</td>
-    <td>@e.expectedWorkHours</td>
-    <td>@e.semester</td>
-    <td>@e.year</td>
-    <td>@e.byuID</td>
-    <td>@e.positionType</td>
-    <td>@e.classCode</td>
-    <td>@e.emplRecord</td>
-    <td>@e.supervisor</td>
-    <td>@e.hireDate</td>
-    <td>@e.payRate</td>
-    <td>@e.lastPayIncrease</td>
-    <td>@e.payIncreaseAmount</td>
-    <td>@e.increaseInputDate</td>
-    <td>@e.majorYear</td>
-    <td>@e.payGradTuition</td>
-    <td>@e.nameChangeCompleted</td>
-    <td>@e.notes</td>
-    <td>@e.terminated</td>
-    <td>@e.terminationDate</td>
-    <td>@e.qualtricsSurveySent</td>
-    <td>@e.submittedForm</td>
-    <td>@e.workAuthorizationReceived</td>
-    <td>@e.workAuthorizationEmailSent</td>
-    <td>@e.byuName</td>
-    <td><a asp-controller="Home" asp-action="Edit" asp-route-byuid="@e.byuID">Edit</a></td>
-    <td><a asp-controller="Home" asp-action="Delete" asp-route-byuid="@e.byuID">Delete</a></td>
-</tr>
+        <tr>
+            <td>@e.firstName</td>
+            <td>@e.lastName</td>
+            <td>@e.international</td>
+            <td>@e.gender</td>
+            <td>@e.email</td>
+            <td>@e.expectedWorkHours</td>
+            <td>@e.semester</td>
+            <td>@e.year</td>
+            <td>@e.byuID</td>
+            <td>@e.positionType</td>
+            <td>@e.classCode</td>
+            <td>@e.emplRecord</td>
+            <td>@e.supervisor</td>
+            <td>@e.hireDate</td>
+            <td>@e.payRate</td>
+            <td>@e.lastPayIncrease</td>
+            <td>@e.payIncreaseAmount</td>
+            <td>@e.increaseInputDate</td>
+            <td>@e.majorYear</td>
+            <td>@e.payGradTuition</td>
+            <td>@e.nameChangeCompleted</td>
+            <td>@e.notes</td>
+            <td>@e.terminated</td>
+            <td>@e.terminationDate</td>
+            <td>@e.qualtricsSurveySent</td>
+            <td>@e.submittedForm</td>
+            <td>@e.workAuthorizationReceived</td>
+            <td>@e.workAuthorizationEmailSent</td>
+            <td>@e.byuName</td>
+            <td><a asp-controller="Home" asp-action="Edit" asp-route-byuid="@e.byuID">Edit</a></td>
+            <td><a asp-controller="Home" asp-action="Delete" asp-route-byuid="@e.byuID">Delete</a></td>
+        </tr>
     }
 </table>
