@@ -79,6 +79,7 @@ namespace IS405.Controllers
             }
         }
 
+        //edit
         [HttpGet]
         public IActionResult Edit(string byuid)
         {
@@ -87,6 +88,31 @@ namespace IS405.Controllers
             var emp = _context.Employees.Single(e => e.byuID == byuid);
 
             return View("Employees", emp);
+        }
+
+        [HttpPost]
+        public IActionResult Edit (Employee emp)
+        {
+            _context.Update(emp);
+            _context.SaveChanges();
+
+            return RedirectToAction("Data");
+        }
+
+        //delete
+        [HttpGet]
+        public IActionResult Delete (string byuid)
+        {
+            var emp = _context.Employees.Single(e => e.byuID == byuid);
+            return View(emp);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Employee emp)
+        {
+            _context.Employees.Remove(emp);
+            _context.SaveChanges();
+            return RedirectToAction("Data");
         }
 
     }
