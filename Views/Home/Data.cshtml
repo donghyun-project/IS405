@@ -10,8 +10,8 @@
 </h4>
 <vc:types></vc:types>
 
-<table>
-    <tr>
+<table class="table table-bordered table-dark table-striped">
+    <tr class="font-weight-bold">
         <th>First</th>
         <th>Last</th>
         <th>International</th>
@@ -74,8 +74,10 @@
             <td>@e.workAuthorizationReceived</td>
             <td>@e.workAuthorizationEmailSent</td>
             <td>@e.byuName</td>
-            <td><a asp-controller="Home" asp-action="Edit" asp-route-byuid="@e.byuID">Edit</a></td>
-            <td><a asp-controller="Home" asp-action="Delete" asp-route-byuid="@e.byuID">Delete</a></td>
+
+
+            <td class="nav-item"><a class="btn btn-sm btn-primary" asp-controller="Home" asp-action="Edit" asp-route-byuid="@e.byuID">Edit</a></td>
+            <td class="nav-item"><a class="btn btn-sm btn-primary" asp-controller="Home" asp-action="Delete" asp-route-byuid="@e.byuID">Delete</a></td>
         </tr>
     }
 </table>
